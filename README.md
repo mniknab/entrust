@@ -38,6 +38,12 @@ Entrust is a succinct and flexible way to add Role-based Permissions to **Larave
 composer require trebol/entrust
 ```
 
+If your version is laravel 8
+
+```shell
+composer require trebol/entrust:2.0
+```
+
 If your version is laravel 7
 
 ```shell
