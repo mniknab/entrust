@@ -1,11 +1,11 @@
-<?php namespace Trebol\Entrust;
+<?php namespace Mniknab\Entrust;
 
 /**
  * This class is the main entry point of entrust. Usually the interaction
  * with this class will be done through the Entrust Facade
  *
  * @license MIT
- * @package Trebol\Entrust
+ * @package Mniknab\Entrust
  */
 
 class Entrust

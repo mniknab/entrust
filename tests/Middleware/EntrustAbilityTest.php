@@ -1,6 +1,6 @@
 <?php
 
-use Trebol\Entrust\Middleware\EntrustAbility;
+use Mniknab\Entrust\Middleware\EntrustAbility;
 use Mockery as m;
 
 class EntrustAbilityTest extends MiddlewareTest

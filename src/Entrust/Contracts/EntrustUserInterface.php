@@ -1,11 +1,11 @@
-<?php namespace Trebol\Entrust\Contracts;
+<?php namespace Mniknab\Entrust\Contracts;
 
 /**
  * This file is part of Entrust,
  * a role & permission management solution for Laravel.
  *
  * @license MIT
- * @package Trebol\Entrust
+ * @package Mniknab\Entrust
  */
 
 interface EntrustUserInterface

@@ -1,6 +1,6 @@
 <?php
 
-use Trebol\Entrust\Entrust;
+use Mniknab\Entrust\Entrust;
 use PHPUnit\Framework\TestCase;
 use Illuminate\Support\Facades\Facade;
 use Mockery as m;
@@ -68,7 +68,7 @@ class EntrustTest extends TestCase
         |------------------------------------------------------------
         */
         $app = new stdClass();
-        $entrust = m::mock('Trebol\Entrust\Entrust[user]', [$app]);
+        $entrust = m::mock('Mniknab\Entrust\Entrust[user]', [$app]);
         $user = m::mock('_mockedUser');
 
         /*
@@ -112,7 +112,7 @@ class EntrustTest extends TestCase
         |------------------------------------------------------------
         */
         $app = new stdClass();
-        $entrust = m::mock('Trebol\Entrust\Entrust[user]', [$app]);
+        $entrust = m::mock('Mniknab\Entrust\Entrust[user]', [$app]);
         $user = m::mock('_mockedUser');
 
         /*
@@ -357,7 +357,7 @@ class EntrustTest extends TestCase
         // Mock Objects
         $app = m::mock('Illuminate\Foundation\Application');
         $app->router = m::mock('Route');
-        $entrust = m::mock("Trebol\Entrust\Entrust[$mockedMethod]", [$app]);
+        $entrust = m::mock("Mniknab\Entrust\Entrust[$mockedMethod]", [$app]);
 
         // Static values
         $route = 'route';
@@ -408,7 +408,7 @@ class EntrustTest extends TestCase
     {
         $app = m::mock('Illuminate\Foundation\Application');
         $app->router = m::mock('Route');
-        $entrust = m::mock('Trebol\Entrust\Entrust[hasRole, can]', [$app]);
+        $entrust = m::mock('Mniknab\Entrust\Entrust[hasRole, can]', [$app]);
 
         // Static values
         $route = 'route';

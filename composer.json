@@ -26,16 +26,16 @@
             "src/commands"
         ],
         "psr-4": {
-            "Trebol\\Entrust\\": "src/Entrust/"
+            "Mniknab\\Entrust\\": "src/Entrust/"
         }
     },
     "extra":{
         "laravel":{
             "providers":[
-                "Trebol\\Entrust\\EntrustServiceProvider"
+                "Mniknab\\Entrust\\EntrustServiceProvider"
             ],
             "aliases":{
-                "Entrust": "Trebol\\Entrust\\EntrustFacade"
+                "Entrust": "Mniknab\\Entrust\\EntrustFacade"
             }
         }
     },

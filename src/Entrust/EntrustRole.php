@@ -1,15 +1,15 @@
-<?php namespace Trebol\Entrust;
+<?php namespace Mniknab\Entrust;
 
 /**
  * This file is part of Entrust,
  * a role & permission management solution for Laravel.
  *
  * @license MIT
- * @package Trebol\Entrust
+ * @package Mniknab\Entrust
  */
 
-use Trebol\Entrust\Contracts\EntrustRoleInterface;
-use Trebol\Entrust\Traits\EntrustRoleTrait;
+use Mniknab\Entrust\Contracts\EntrustRoleInterface;
+use Mniknab\Entrust\Traits\EntrustRoleTrait;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Config;
 

@@ -1,13 +1,13 @@
 <?php
 
-use Trebol\Entrust\Contracts\EntrustUserInterface;
-use Trebol\Entrust\Traits\EntrustUserTrait;
+use Mniknab\Entrust\Contracts\EntrustUserInterface;
+use Mniknab\Entrust\Traits\EntrustUserTrait;
 use PHPunit\Framework\TestCase;
 use Illuminate\Cache\ArrayStore;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Cache;
-use Trebol\Entrust\Permission;
-use Trebol\Entrust\Role;
+use Mniknab\Entrust\Permission;
+use Mniknab\Entrust\Role;
 use Mockery as m;
 
 class EntrustUserTest extends TestCase
@@ -1107,7 +1107,7 @@ class EntrustUserTest extends TestCase
 
     protected function mockPermission($permName)
     {
-        $permMock = m::mock('Trebol\Entrust\Permission');
+        $permMock = m::mock('Mniknab\Entrust\Permission');
         $permMock->name = $permName;
         $permMock->display_name = ucwords(str_replace('_', ' ', $permName));
         $permMock->id = 1;
@@ -1117,7 +1117,7 @@ class EntrustUserTest extends TestCase
 
     protected function mockRole($roleName)
     {
-        $roleMock = m::mock('Trebol\Entrust\Role');
+        $roleMock = m::mock('Mniknab\Entrust\Role');
         $roleMock->name = $roleName;
         $roleMock->perms = [];
         $roleMock->permissions = [];

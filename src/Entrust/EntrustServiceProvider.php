@@ -1,11 +1,11 @@
-<?php namespace Trebol\Entrust;
+<?php namespace Mniknab\Entrust;
 
 /**
  * This file is part of Entrust,
  * a role & permission management solution for Laravel.
  *
  * @license MIT
- * @package Trebol\Entrust
+ * @package Mniknab\Entrust
  */
 
 use Illuminate\Support\Facades\Blade;
@@ -101,7 +101,7 @@ class EntrustServiceProvider extends ServiceProvider
             return new Entrust($app);
         });
 
-        $this->app->alias('entrust', 'Trebol\Entrust\Entrust');
+        $this->app->alias('entrust', 'Mniknab\Entrust\Entrust');
     }
 
     /**

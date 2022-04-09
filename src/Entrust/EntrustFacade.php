@@ -1,11 +1,11 @@
-<?php namespace Trebol\Entrust;
+<?php namespace Mniknab\Entrust;
 
 /**
  * This file is part of Entrust,
  * a role & permission management solution for Laravel.
  *
  * @license MIT
- * @package Trebol\Entrust
+ * @package Mniknab\Entrust
  */
 
 use Illuminate\Support\Facades\Facade;
