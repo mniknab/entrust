@@ -1,9 +1,6 @@
 # ENTRUST (Laravel Package)
 
-[![Build Status](https://travis-ci.org/jromero98/entrust.svg)](https://travis-ci.org/jromero98/entrust)
-[![Latest Stable Version](https://poser.pugx.org/trebol/entrust/v/stable?format=plastic)](https://packagist.org/packages/trebol/entrust)
-[![Total Downloads](https://poser.pugx.org/trebol/entrust/downloads?format=plastic)](https://packagist.org/packages/trebol/entrust)
-[![License](https://poser.pugx.org/trebol/entrust/license?format=plastic)](https://packagist.org/packages/trebol/entrust)
+[![Latest Stable Version](https://poser.pugx.org/mniknab/entrust/v/stable?format=plastic)](https://packagist.org/packages/mniknab/entrust)
 
 Entrust is a succinct and flexible way to add Role-based Permissions to **Laravel**.
 
@@ -35,37 +32,37 @@ Entrust is a succinct and flexible way to add Role-based Permissions to **Larave
 1). In order to install Laravel Entrust, just run:
 
 ```shell
-composer require trebol/entrust
+composer require mniknab/entrust
 ```
 
 If your version is laravel 8
 
 ```shell
-composer require trebol/entrust:2.0
+composer require mniknab/entrust:2.0
 ```
 
 If your version is laravel 7
 
 ```shell
-composer require trebol/entrust:1.0.2
+composer require mniknab/entrust:1.0.2
 ```
 
 If your version is laravel 6
 
 ```shell
-composer require trebol/entrust:0.6
+composer require mniknab/entrust:0.6
 ```
 
 If your version is laravel 5.8
 
 ```shell
-composer require trebol/entrust:0.2
+composer require mniknab/entrust:0.2
 ```
 
 2). In the same `config/app.php` and add the following to the `aliases ` array: 
 
 ```php
-'Entrust'   => Trebol\Entrust\EntrustFacade::class,
+'Entrust'   => Mniknab\Entrust\EntrustFacade::class,
 ```
 
 3). Run the command below to publish the package config file `config/entrust.php`:
@@ -89,9 +86,9 @@ php artisan vendor:publish
 5).  If you want to use [Middleware](#middleware) you also need to add the following:
 
 ```php
-    'role' => \Trebol\Entrust\Middleware\EntrustRole::class,
-    'permission' => \Trebol\Entrust\Middleware\EntrustPermission::class,
-    'ability' => \Trebol\Entrust\Middleware\EntrustAbility::class,
+    'role' => \Mniknab\Entrust\Middleware\EntrustRole::class,
+    'permission' => \Mniknab\Entrust\Middleware\EntrustPermission::class,
+    'ability' => \Mniknab\Entrust\Middleware\EntrustAbility::class,
 ```
 
 to `routeMiddleware` array in `app/Http/Kernel.php`.
@@ -133,7 +130,7 @@ Create a Role model inside `app/models/Role.php` using the following example:
 ```php
 <?php namespace App;
 
-use Trebol\Entrust\EntrustRole;
+use Mniknab\Entrust\EntrustRole;
 
 class Role extends EntrustRole
 {
@@ -154,7 +151,7 @@ Create a Permission model inside `app/models/Permission.php` using the following
 ```php
 <?php namespace App;
 
-use Trebol\Entrust\EntrustPermission;
+use Mniknab\Entrust\EntrustPermission;
 
 class Permission extends EntrustPermission
 {
@@ -177,7 +174,7 @@ Next, use the `EntrustUserTrait` trait in your existing `User` model. For exampl
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use Trebol\Entrust\Traits\EntrustUserTrait;
+use Mniknab\Entrust\Traits\EntrustUserTrait;
 
 class User extends Authenticatable
 {
@@ -549,7 +546,7 @@ When trying to use the EntrustUserTrait methods, you encounter the error which l
 
 then probably you don't have published Entrust assets or something went wrong when you did it.
 First of all check that you have the `entrust.php` file in your `config` directory.
-If you don't, then try `php artisan vendor:publish` and, if it does not appear, manually copy the `/vendor/trebol/entrust/src/config/config.php` file in your config directory and rename it `entrust.php`.
+If you don't, then try `php artisan vendor:publish` and, if it does not appear, manually copy the `/vendor/mniknab/entrust/src/config/config.php` file in your config directory and rename it `entrust.php`.
 
 If your app uses a custom namespace then you'll need to tell entrust where your `permission` and `role` models are, you can do this by editing the config file in `config/entrust.php`
 
